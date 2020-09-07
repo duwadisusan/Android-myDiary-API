@@ -28,7 +28,7 @@ router.post("/register", (req, res, next) => {
         User.create({ email, password: hash, firstName, lastName, role })
           .then((user) => {
             res.json({
-              Status: "Registration Successful!",
+              status: "Registration Successful!"
             });
           })
           .catch(err); // comment lifted

@@ -34,7 +34,7 @@ app.use("/api/logs", auth.verifyUser, logRouter);
 app.use("/api/bucketlists", auth.verifyUser, bucketlistRouter);
 app.use("/api/books", auth.verifyUser, bookRouter);
 app.use("/api/jokes", auth.verifyUser, jokesRouter);
-app.use("/api/upload", auth.verifyUser, uploadRouter);
+app.use("/api/upload", uploadRouter);
 
 app.use((req, res, next) => {
   let err = Error("Error");
